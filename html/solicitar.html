@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMA - Home</title>
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+    <link rel="stylesheet" href="../css/styles_home.css">
+</head>
+<body>
+    <!-- Importação do Header -->
+    <div id="header"></div>
+
+    <main>
+        colocar aqui elementos da tela desktop 4
+    </main>
+
+    <script>
+        // Carrega o header dinamicamente
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                // Insere o HTML do header na página
+                document.getElementById("header").innerHTML = data;
+                
+                // Agora que o conteúdo foi carregado, podemos adicionar o evento de clique
+                const logoutButton = document.querySelector('.user-options');
+                if (logoutButton) {
+                    logoutButton.addEventListener('click', function() {
+                        // Redireciona para a página index.html
+                        window.location.href = "index.html";
+                    });
+                }
+            })
+            .catch(error => console.error('Erro ao carregar o header:', error));
+    </script>
+</body>
+</html>

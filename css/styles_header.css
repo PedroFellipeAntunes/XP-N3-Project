@@ -1,0 +1,100 @@
+/* Variáveis globais */
+:root {
+    --primary-color: #0065FF;
+    --hover-color: #0056b3;
+    --text-color: #112950;
+    --input-color: #B2BA6C;
+    --border-color: #ccc;
+    --bg-color: #ffffff;
+    --font-family: "Inter", sans-serif;
+    --font-size-title: 40px;
+    --font-size-subtitle: 14px;
+    --font-size-label: 15px;
+    --font-size-input: 15px;
+    --font-size-button: 17px;
+    --padding-input: 10px;
+    --padding-button: 15px;
+    --border-radius: 12px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 15px;
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-right {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 0.5em;
+    color: var(--bg-color);
+}
+
+.header-right .user-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    font-size: 14px;
+    font-weight: 300;
+    border: 0;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.header-right .user-options:hover {
+    cursor: pointer;
+}
+
+.header-right .user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.header-right .user-info .user-nome {
+    font-size: 20px;
+}
+
+.header-right .user-info .user-mat {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+@media screen and (max-width: 400px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1em;
+        padding: 1em;
+    }
+
+    .header-left h1 {
+        font-size: 14px;
+    }
+
+    .header-right {
+        gap: 1em;
+        padding: 0.8em;
+        text-align: center;
+        width: 100%;
+    }
+}
