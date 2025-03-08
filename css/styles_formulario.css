@@ -2,9 +2,11 @@
     --primary-color: #0065FF;
     --hover-color: #0056b3;
     --text-color: #112950;
+    --text-color2: #666;
     --border-color: #0065FF;
     --bg-color: #ffffff;
     --dk-color: black;
+    --border-color: #ccc;
     --font-family: Arial, sans-serif; /* Fallback since Inter might not be available */
     --padding-button: 20px;
     --border-radius: 15px;
@@ -73,6 +75,10 @@ body {
     justify-content: left;
 }
 
+#diff{
+    color: var(--text-color2);
+}
+
 #texto_quest{
     color: var(--primary-color);
     font-size: 24px;
@@ -89,8 +95,8 @@ body {
 .btn-sintoma {
     padding: var(--padding-button);
     background: transparent;
-    border: 3px solid var(--border-color);
-    color: var(--border-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: all 0.3s ease;
@@ -139,6 +145,7 @@ input[type="text"] {
     width: 100%;
     padding: 15px;
     border: none;
+    color: var(--text-color2);
     border-bottom: 3px solid var(--border-color);
     background: transparent;
     font-size: 18px;
@@ -184,61 +191,7 @@ input[type="text"] {
     transform: scale(1.05); /* Slight scale on hover for submit button */
 }
 
-/* @media screen and (max-width: 768px) {
-    .container {
-        padding: 20px;
-        max-width: 90%;
-    }
 
-    .titulo {
-        font-size: 30px;
-    }
-
-    .titulo-img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .subtitulo {
-        font-size: 16px;
-    }
-
-    .sintomas {
-        gap: 15px;
-    }
-
-    .btn-sintoma {
-        padding: 15px;
-        font-size: 16px;
-        min-width: 120px;
-        height: 50px;
-    }
-
-    .form-section {
-        flex-direction: column;
-        gap: 2em;
-    }
-
-    .form-section label {
-        font-size: 16px;
-    }
-
-    input[type="date"],
-    input[type="text"] {
-        padding: 12px;
-        font-size: 16px;
-    }
-
-    .form-buttons-sol {
-        flex-direction: column;
-        gap: 1.5em;
-    }
-
-    .form-buttons-sol input {
-        width: 100%;
-        font-size: 18px;
-    }
-} */
 
 @media screen and (max-width: 768px) {
     .container {
