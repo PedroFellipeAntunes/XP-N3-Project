@@ -79,3 +79,13 @@ body {
         padding-inline: 0;
     }
 }
+
+/* Foco em deixar o Perfil a baixo da logo Sus */
+@media screen and (max-width: 768px) {
+    #header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

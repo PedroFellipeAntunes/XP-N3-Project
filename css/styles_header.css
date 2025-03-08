@@ -61,6 +61,7 @@
 
 .header-right .user-options:hover {
     cursor: pointer;
+
 }
 
 .header-right .user-info {
@@ -96,5 +97,72 @@
         padding: 0.8em;
         text-align: center;
         width: 100%;
+    }
+}
+
+
+/* Configuraçao do perfil */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--bg-color);
+    flex-wrap: wrap; /* Permite que os elementos quebrem a linha */
+    gap: 20px; /* Espaçamento entre os blocos */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+/* Responsividade para celulares */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Empilha os elementos na vertical */
+        text-align: center; 
+    }
+    
+
+    .header-right {
+        justify-content: center; /* Centraliza o retângulo do perfil */
+        width: 100%; 
+    }
+
+    .user-info {
+        justify-content: center; 
+    }
+/* Posicao do icone de sair fica a DIREITA ao ficar tamanho do celular */
+    .user-options{
+        position: absolute;
+        right: 20px;
+        top: 12%;
+        transform: translateY(-50%);
     }
 }

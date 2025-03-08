@@ -7,14 +7,17 @@
     --border-color: #ccc;
     --bg-color: #ffffff;
     --font-family: "Inter", sans-serif;
-    --font-size-title: 40px;
-    --font-size-subtitle: 14px;
-    --font-size-label: 15px;
-    --font-size-input: 15px;
-    --font-size-button: 17px;
-    --padding-input: 10px;
-    --padding-button: 15px;
+
+    /* Tamanhos maiores */
+    --font-size-title: 45px; 
+    --font-size-subtitle: 16px; 
+    --font-size-label: 24px; 
+    --font-size-input: 17px; 
+    --font-size-button: 20px; 
+    --padding-input: 15px; 
+    --padding-button: 18px; 
     --border-radius: 12px;
+    --background-color: white;
 }
 
 /* Reset básico */
@@ -26,7 +29,7 @@
     font-weight: bold;
 }
 
-/* Corpo da página */
+
 body {
     display: flex;
     flex-direction: column;
@@ -35,25 +38,25 @@ body {
     background: var(--background-color);
 }
 
-/* Container central */
+/* Container Central */
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2.5em;
+    gap: 3em; /* Mais espaçamento */
     padding-bottom: 25px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px; /* Mais espaçamento entre blocos */
 }
 
 .form-section {
     display: flex;
-    gap: 1em;
+    gap: 2em; 
     justify-content: space-between;
 }
 
@@ -62,95 +65,107 @@ label {
     font-size: var(--font-size-label);
     font-weight: bold;
     color: var(--primary-color);
+    font-size: 20px;
 }
+
 
 section {
     flex-grow: 1;
 }
 
-.form-buttons-sol {
-    display: flex;
-    justify-content: space-between;
-    gap: 2em
-}
-
-.form-buttons-sol input {
-    flex: 1;
-}
-
 input[type="text"],
 input[type="date"],
 input[type="tel"],
-select {
+select{
     width: 100%;
     padding: var(--padding-input);
+    height: 55px; /* Altura maior */
     border: 0;
     border-bottom: 1px solid var(--border-color);
     font-size: var(--font-size-input);
     font-weight: normal;
     color: var(--input-color);
     background-color: var(--bg-color);
+   
+    
 }
 
-/* Botão */
-input[type="submit"],
-input[type="button"] {
+/* Ajustes de tamanho */
+
+
+/* Botões */
+.form-buttons-sol {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.form-buttons-sol input {
+    flex: 1;
+    padding: var(--padding-button);
+    font-size: var(--font-size-button);
+    height: 60px; /* Altura maior */
+    border-radius: var(--border-radius);
+    border: 2px solid var(--primary-color);
     background-color: var(--primary-color);
     color: white;
-    border: none;
-    font-size: var(--font-size-button);
-    font-family: inherit;
     cursor: pointer;
-    border-radius: var(--border-radius);
     transition: background 0.3s ease;
-    text-wrap: nowrap;
-    padding: var(--padding-button);
-    /* padding-inline: 5em; */
-    border: 2px solid var(--primary-color);
 }
 
-input[type="submit"]:hover, input[type="button"]:hover {
+.form-buttons-sol input:hover {
     background-color: var(--bg-color);
     color: var(--primary-color);
-    border-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 .titulo {
     display: flex;
     margin-top: 2em;
     align-items: center;
-    font-family: var(--font-family);
+    font-size: var(--font-size-title);
     color: var(--text-color);
 }
 
-@media screen and (max-width: 400px) {
+.titulo img {
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (max-width: 768px) {
     .container {
         width: 90%;
         max-width: 90%;
-        box-sizing: border-box;
+    }
+    h2{
+    font-size: 36px;
     }
 
     .container form {
         max-width: 100%;
-        box-sizing: border-box;
     }
 
-    .container .form-section {
+    .form-section {
         flex-direction: column;
-        max-width: 100%;
-        box-sizing: border-box;
+        gap: 1em;
     }
 
     .form-buttons-sol {
-        display: flex;
-        /* flex-direction: column; */
         justify-content: center;
-        gap: 1em; /* Adicionando espaço entre os botões */
+        gap: 1em;
     }
 
     .form-buttons-sol input {
-        width: 100%; /* Fazendo com que o botão ocupe 100% da largura disponível */
+        width: 100%;
         padding: var(--padding-button);
-        box-sizing: border-box; /* Garantindo que o padding não afete o tamanho do botão */
     }
+
+    :root {
+        --font-size-title: 35px;
+        --font-size-label: 16px;
+        --padding-input: 12px;
+        --padding-button: 15px;
+    }
+
 }
