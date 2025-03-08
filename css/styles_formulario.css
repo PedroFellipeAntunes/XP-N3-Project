@@ -60,7 +60,7 @@ body {
 
 .subtitulo{
     font-size: 24px;
-    font-weight: lighter;
+    font-weight: bold;
     color: var(--primary-color);
     margin-bottom: 10px;
     display: flex;
@@ -95,7 +95,7 @@ body {
 .btn-sintoma {
     padding: var(--padding-button);
     background: transparent;
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
     color: var(--primary-color);
     border-radius: var(--border-radius);
     cursor: pointer;
