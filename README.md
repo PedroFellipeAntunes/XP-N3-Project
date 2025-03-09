@@ -1,5 +1,4 @@
 # Sistema de Atendimento Médico para Alunos
-
 Este repositório contém um mock de front-end para um sistema de gestão de atendimentos médicos no Instituto Federal do Monte Castelo. O projeto foi desenvolvido como parte da disciplina de Programação Extrema.
 
 ## 📌 Problema
