@@ -110,9 +110,24 @@ body {
 }
 
 .btn-sintoma:hover {
-    background: var(--hover-color);
+    /* background: var(--hover-color); */
+    background-color: var(--primary-color);
     color: white;
     transform: scale(var(--button-scale)); /* Increases size on hover */
+}
+
+.voltar,
+.submit {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color)
+}
+
+.voltar:hover,
+.submit:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-color: var(--primary-color);
 }
 
 .selecionado {
@@ -163,17 +178,17 @@ input[type="text"] {
 .form-buttons-sol input {
     flex: 1;
     padding: var(--padding-button);
-    border: 3px solid var(--primary-color);
+    /* border: 3px solid var(--primary-color); */
     border-radius: var(--border-radius);
     font-size: 20px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.form-buttons-sol input[type="button"] {
+/* .form-buttons-sol input[type="button"] {
     background: transparent;
     color: var(--primary-color);
-}
+} */
 
 .form-buttons-sol input[type="submit"] {
     background: var(--primary-color);
@@ -187,7 +202,7 @@ input[type="text"] {
 }
 
 .form-buttons-sol input:hover:not(:disabled) {
-    background: var(--hover-color);
+    background: var(--primary-color);
     transform: scale(1.05); /* Slight scale on hover for submit button */
 }
 
