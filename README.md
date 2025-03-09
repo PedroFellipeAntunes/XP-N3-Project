@@ -24,3 +24,12 @@ O mock apresenta páginas básicas simulando a interface do sistema, incluindo:
 - Página inicial com opções de navegação;
 - Formulário para solicitação de atendimento;
 - Histórico de atendimentos dos alunos.
+
+## Imagens do Mock
+<p align="center">
+  <img src="screen/1_login.png" width="350" alt="1">
+  <img src="screen/2_home.png" width="350" alt="2">
+  <img src="screen/3_solicitar.png" width="350" alt="3">
+  <img src="screen/4_sintomas.png" width="350" alt="4">
+  <img src="screen/5_envio.png" width="350" alt="5">
+</p>
